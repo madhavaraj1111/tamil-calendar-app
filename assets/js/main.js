@@ -6,10 +6,18 @@ const btnForm=document.querySelector("#formDate");
 const dateInput=document.querySelector("#dateInput");
 dateInput.addEventListener("change",(e)=>{
     e.preventDefault();
-    const dateInput=document.querySelector("#dateInput").value;
+    if(dateInput.value){
+         const dateInput=document.querySelector("#dateInput").value;
     const dateImg=document.querySelector("#dateImg");
     dateImg.classList.remove("hidden");
     dateImg.src=`https://www.prokerala.com/general/calendar/imgs/daily/${dateInput}.png`
     console.log(dateInput);
+    }
+    else{
+        
+        dateImg.classList.add("hidden");
+        
+    }
+   
     
 })
